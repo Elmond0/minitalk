@@ -26,6 +26,7 @@ void	ft_atob(int pid, char c)
 		usleep(75);
 		bit++;
 	}
+	usleep(75);
 }
 
 int	main(int argc, char **argv)
