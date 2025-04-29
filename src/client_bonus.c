@@ -6,7 +6,7 @@
 /*   By: elmondo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:21:24 by elmondo           #+#    #+#             */
-/*   Updated: 2025/04/29 11:40:17 by elmondo          ###   ########.fr       */
+/*   Updated: 2025/04/29 12:34:06 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	ft_atob(int pid, char c)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(175);
+		usleep(350);
 		bit++;
 	}
-	usleep(175);
+	usleep(350);
 }
 
 int	main(int argc, char **argv)
