@@ -6,7 +6,7 @@
 /*   By: elmondo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:21:27 by elmondo           #+#    #+#             */
-/*   Updated: 2025/04/29 11:42:41 by elmondo          ###   ########.fr       */
+/*   Updated: 2025/05/03 13:32:25 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(int argc, char **argv)
 	ft_printf("%d\n", pid);
 	act.sa_sigaction = ft_btoa;
 	sigemptyset(&act.sa_mask);
-	act.sa_flags = 0;
+	act.sa_flags = SA_SIGINFO;
 	while (argc == 1)
 	{
 		sigaction(SIGUSR1, &act, NULL);
