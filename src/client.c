@@ -6,7 +6,7 @@
 /*   By: elmondo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 17:27:06 by elmondo           #+#    #+#             */
-/*   Updated: 2025/04/29 12:31:19 by elmondo          ###   ########.fr       */
+/*   Updated: 2025/05/05 10:36:18 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ int	main(int argc, char **argv)
 	if (argc == 3)
 	{
 		pid = ft_atoi(argv[1]);
+		if (pid < 0)
+		{
+			ft_printf("Error\n");
+			return (1);
+		}
 		while (argv[2][i] != '\0')
 		{
 			ft_atob(pid, argv[2][i]);

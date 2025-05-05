@@ -6,7 +6,7 @@
 /*   By: elmondo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 11:21:24 by elmondo           #+#    #+#             */
-/*   Updated: 2025/05/03 13:26:29 by elmondo          ###   ########.fr       */
+/*   Updated: 2025/05/05 10:36:57 by elmondo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,14 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
+	pid = ft_atoi(argv[1]);
+	if (pid < 0 || argc != 3)
+	{
+		ft_printf("Error\n");
+		return (1);
+	}
 	if (argc == 3)
 	{
-		pid = ft_atoi(argv[1]);
 		signal(SIGUSR2, confirm_msg);
 		while (argv[2][i] != '\0')
 		{
@@ -51,12 +56,6 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		ft_atob(pid, '\0');
-		pause();
+		usleep(350);
 	}
-	else
-	{
-		ft_printf("Error\n");
-		return (1);
-	}
-	return (0);
 }
